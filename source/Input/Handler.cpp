@@ -12,6 +12,8 @@
 #include "ResizeEvent.hpp"
 #include "ButtonEvent.hpp"
 #include "MotionEvent.hpp"
+#include "RenderEvent.hpp"
+#include "FocusEvent.hpp"
 
 #include <Logger/Console.hpp>
 #include <Streams/Container.hpp>
@@ -46,6 +48,20 @@ namespace Input
 	bool Handler::process(const MotionEvent & event)
 	{
 		Console::warn("Unhandled Motion Event", Streams::safe(event.delta()));
+		
+		return false;
+	}
+	
+	bool Handler::process(const RenderEvent & event)
+	{
+		Console::warn("Unhandled Render Event");
+		
+		return false;
+	}
+	
+	bool Handler::process(const FocusEvent & event)
+	{
+		Console::warn("Unhandled Focus Event", Streams::safe(event.flags()));
 		
 		return false;
 	}

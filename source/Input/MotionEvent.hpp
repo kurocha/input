@@ -20,6 +20,7 @@ namespace Input
 	using Delta = Numerics::Vector<2, float>;
 	using Bounds = Geometry::Box<2, float>;
 	
+	// Interaction via a pointer device.
 	class MotionEvent : public Event
 	{
 	public:

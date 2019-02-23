@@ -13,6 +13,7 @@
 
 namespace Input
 {
+	// Interaction via a keyboard or other device with buttons.
 	class ButtonEvent : public Event
 	{
 	public:

@@ -14,6 +14,8 @@ namespace Input
 	class ResizeEvent;
 	class ButtonEvent;
 	class MotionEvent;
+	class RenderEvent;
+	class FocusEvent;
 	
 	class Handler
 	{
@@ -26,5 +28,7 @@ namespace Input
 		virtual bool process(const ResizeEvent &);
 		virtual bool process(const ButtonEvent &);
 		virtual bool process(const MotionEvent &);
+		virtual bool process(const RenderEvent &);
+		virtual bool process(const FocusEvent &);
 	};
 }

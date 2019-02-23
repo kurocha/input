@@ -16,6 +16,7 @@ namespace Input
 {
 	using Size = Numerics::Vector<2, std::size_t>;
 	
+	// The receiver has changed it's on-screen size.
 	class ResizeEvent : public Event
 	{
 	public:

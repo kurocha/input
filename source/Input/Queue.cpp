@@ -8,6 +8,12 @@
 
 #include "Queue.hpp"
 
+#include "ResizeEvent.hpp"
+#include "ButtonEvent.hpp"
+#include "MotionEvent.hpp"
+#include "RenderEvent.hpp"
+#include "FocusEvent.hpp"
+
 namespace Input
 {
 	Queue::Queue()
@@ -40,6 +46,20 @@ namespace Input
 	bool Queue::process(const MotionEvent & event)
 	{
 		_queue.emplace(std::make_unique<MotionEvent>(event));
+		
+		return true;
+	}
+	
+	bool Queue::process(const RenderEvent & event)
+	{
+		_queue.emplace(std::make_unique<RenderEvent>(event));
+		
+		return true;
+	}
+	
+	bool Queue::process(const FocusEvent & event)
+	{
+		_queue.emplace(std::make_unique<FocusEvent>(event));
 		
 		return true;
 	}

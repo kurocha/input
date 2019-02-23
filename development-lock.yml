@@ -47,3 +47,6 @@ parallel:
 time:
   :commit: 9dae349ec5fc45fa8f837412b6de357a88c85286
   :branch: master
+logger:
+  :commit: abf4f2b2404b714d5ded2cd37c39d24a66ac2124
+  :branch: master
