@@ -43,11 +43,4 @@ namespace Input
 		
 		return true;
 	}
-	
-	bool Queue::process(const SystemEvent & event)
-	{
-		_queue.emplace(std::make_unique<SystemEvent>(event));
-		
-		return true;
-	}
 }

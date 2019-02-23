@@ -27,6 +27,5 @@ namespace Input
 		virtual bool process(const ResizeEvent &) {return false;}
 		virtual bool process(const ButtonEvent &) {return false;}
 		virtual bool process(const MotionEvent &) {return false;}
-		virtual bool process(const SystemEvent &) {return false;}
 	};
 }

@@ -12,7 +12,6 @@
 #include "ResizeEvent.hpp"
 #include "ButtonEvent.hpp"
 #include "MotionEvent.hpp"
-#include "SystemEvent.hpp"
 #include "Handler.hpp"
 
 #include <Parallel/Queue.hpp>
@@ -32,7 +31,6 @@ namespace Input
 		virtual bool process(const ResizeEvent &);
 		virtual bool process(const ButtonEvent &);
 		virtual bool process(const MotionEvent &);
-		virtual bool process(const SystemEvent &);
 		
 	protected:
 		using EventPtr = std::unique_ptr<Event>;

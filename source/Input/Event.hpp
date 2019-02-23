@@ -25,6 +25,5 @@ namespace Input
 		
 	protected:
 		Time::Interval _time;
-		
 	};
 }
