@@ -15,6 +15,9 @@ end
 define_target 'input-library' do |target|
 	target.depends 'Language/C++14'
 	
+	target.depends 'Library/Streams'
+	target.depends 'Library/Logger'
+	
 	target.depends 'Library/Time', public: true
 	target.depends 'Library/Parallel', public: true
 	target.depends 'Library/Numerics', public: true
@@ -68,4 +71,7 @@ define_configuration "input" do |configuration|
 	configuration.require "numerics"
 	configuration.require "geometry"
 	configuration.require "parallel"
+	
+	configuration.require "logger"
+	configuration.require "streams"
 end
