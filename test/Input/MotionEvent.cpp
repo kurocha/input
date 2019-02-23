@@ -23,7 +23,6 @@ namespace Input
 				
 				examiner.expect(event.button_pressed(MouseLeftButton)).to(be_true);
 				examiner.expect(event.button_pressed(MouseRightButton)).to(be_false);
-
 			}
 		},
 	};
