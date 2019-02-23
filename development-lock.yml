@@ -35,3 +35,15 @@ build-files:
 streams:
   :commit: dc8b15f98e04ec3661d530b87d87b072a4d2c997
   :branch: master
+numerics:
+  :commit: f4227323b5035c89e41490f5cc8f87797b670fad
+  :branch: master
+geometry:
+  :commit: 268e4f6f7ca5d72676cad662e64bf78bab1082c7
+  :branch: master
+parallel:
+  :commit: 70fd29c05588bc153a79af2cc0fa92606a1f973f
+  :branch: master
+time:
+  :commit: 9dae349ec5fc45fa8f837412b6de357a88c85286
+  :branch: master

@@ -35,6 +35,5 @@ namespace Input
 	protected:
 		Key _key;
 		State _state;
-		
 	};
 }

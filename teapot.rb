@@ -15,8 +15,7 @@ end
 define_target 'input-library' do |target|
 	target.depends 'Language/C++14'
 	
-	target.depends 'Library/Time'
-	
+	target.depends 'Library/Time', public: true
 	target.depends 'Library/Parallel', public: true
 	target.depends 'Library/Numerics', public: true
 	target.depends 'Library/Geometry', public: true
@@ -65,6 +64,7 @@ end
 define_configuration "input" do |configuration|
 	configuration.public!
 	
+	configuration.require "time"
 	configuration.require "numerics"
 	configuration.require "geometry"
 	configuration.require "parallel"
