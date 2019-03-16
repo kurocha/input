@@ -19,25 +19,28 @@ namespace Input
 		enum Flags : std::uint8_t
 		{
 			// Focus was lost.
-			LOST = 0,
+			LOST = 1,
 			
 			// Focus was gained.
-			GAINED = 1,
+			GAINED = 2,
 			
 			// The view was minimised.
-			MINIMISED = 2,
+			MINIMISED = 4,
 			
 			// The view was maximised.
-			MAXIMISED = 4,
+			MAXIMISED = 8,
 			
-			// The application moved to the foreground.
-			FOREGROUND = 8,
+			// The window moved to the foreground.
+			FOREGROUND = 16,
 			
-			// The application moved to the background.
-			BACKGROUND = 16,
+			// The window moved to the background.
+			BACKGROUND = 32,
 			
-			// The application has entered or exited full-screen.
-			FULLSCREEN = 32
+			// The window has entered or exited full-screen.
+			FULLSCREEN = 64,
+			
+			// The window has been closed.
+			CLOSED = 128,
 		};
 		
 		FocusEvent(const Time::Interval & time, Flags flags) : Event(time), _flags(flags) {}
