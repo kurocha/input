@@ -47,7 +47,7 @@ namespace Input
 	
 	bool Handler::process(const MotionEvent & event)
 	{
-		Console::warn("Unhandled Motion Event", Streams::safe(event.delta()));
+		Console::warn("Unhandled Motion Event", Streams::safe(event.current_position()), Streams::safe(event.delta()));
 		
 		return false;
 	}
