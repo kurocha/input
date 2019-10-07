@@ -11,11 +11,11 @@
 #include <unordered_map>
 #include <vector>
 
-#include <Euclid/Numerics/Vector.h>
+#include <Numerics/Vector.h>
 
 namespace Input
 {
-	using Euclid::Numerics::Vec3;
+	using Numerics::Vec3;
 
 	typedef std::intptr_t FingerID;
 
